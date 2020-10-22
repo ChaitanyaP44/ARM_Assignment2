@@ -1,7 +1,7 @@
 ; Log(1+x) series implementation 
 ; Log(1+x) = x-(x^2/2)+(x^3/3)-(x^4/4).....(x^n/n)
 ; Series is implemented upto 7th term and result register S7 stores 33506.0546875 (in decimal) after adding 7th term which is correct as expected. 
-	AREA expo_series, CODE, READONLY
+	AREA log_series, CODE, READONLY
 	EXPORT __main
 	ENTRY
 ; 
