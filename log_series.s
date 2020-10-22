@@ -31,7 +31,7 @@ loop
 	
 	VADD.F32 S1, S1, S6		        ; Updates n i.e. n=n+1
 	VMUL.F32 S3, S3, S0				; Updates numerator (multiplying by 'x')
-	VNEG.F32 S8, S8					; Toggles sign bit
+	VNEG.F32 S8, S8					; To Toggle sign of next term
 	VCMP.F32 S1, S2					; Checks stop condition (when n reaches maximum n_max)
 	VMRS APSR_nzcv, FPSCR			; Transfer FP status register to ARM APSR. This instuction is required for subsequent branch conditional instruction.
 	BNE loop						; when exit condition is NOT satisfied
