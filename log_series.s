@@ -26,7 +26,7 @@ __main FUNCTION
 	
 loop
 	VDIV.F32 S4, S3, S1			    ; Calculating (x^n/n)
-	VMUL.F32 S4, S4, S8
+	VMUL.F32 S4, S4, S8                          ; changing sign of term
 	VADD.F32 S7, S7, S4				; Updating result register by adding current term
 	
 	VADD.F32 S1, S1, S6		        ; Updates n i.e. n=n+1
